@@ -5,7 +5,7 @@
             <autor>Cervantes</autor>
             <titulo>Quijote</titulo>
             <editorial>El barco de Vapor</editorial>
-            <isbn>1234</isbn>
+            <isbn>12131334</isbn>
             <precio>20.7</precio>
             <año>2001</año>
         </Libro>
@@ -13,9 +13,17 @@
             <autor>Fernando de Rojas</autor>
             <titulo>La celestina</titulo>
             <editorial>Anaya</editorial>
-            <isbn>2458</isbn>
+            <isbn>245854412</isbn>
             <precio>15.7</precio>
             <año>1985</año>
+        </Libro>
+        <Libro>
+            <autor>Cervantes</autor>
+            <titulo>La galatea</titulo>
+            <editorial>Anaya</editorial>
+            <isbn>51461331</isbn>
+            <precio>30.75</precio>
+            <año>1585</año>
         </Libro>
     </Libros>
     <lugar>Getafe</lugar>
