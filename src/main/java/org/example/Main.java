@@ -23,7 +23,7 @@ public class Main {
             if      (opcion == 1)  Gestion.muestraInformacionTotalLibreria();
             else if (opcion == 2)  Gestion.muestraTitulosLibros();
             else if (opcion == 3)  Gestion.muestraLibrosPorAutor();
-            else if (opcion == 4)  Gestion.agregrarLibroNuevo();
+            else if (opcion == 4)  Gestion.agregrarLibroNuevo() ;
             else if (opcion == 5)  System.out.println("Fin del programa.");
             else System.err.println("Opcion inválida intentalo de nuevo.\n");
 
