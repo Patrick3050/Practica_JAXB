@@ -20,8 +20,8 @@ public class Main {
                     Seleccione una opción:\t""");
             opcion = t.nextInt();
 
-            if      (opcion == 1)  Gestion.muestraInformacionLibreria();
-            else if (opcion == 2)  Gestion.actualizarXML();
+            if      (opcion == 1)  Gestion.muestraInformacionTotalLibreria();
+            else if (opcion == 2)  Gestion.muestraTitulosLibros();
             else if (opcion == 3)  ;
             else if (opcion == 4)  ;
             else if (opcion == 5)  System.out.println("Fin del programa.");

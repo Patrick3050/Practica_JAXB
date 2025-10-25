@@ -30,12 +30,22 @@ public class Gestion {
         //m.marshal(lib, System.out);
     }
 
-    public static void muestraInformacionLibreria() throws JAXBException {
+    public static void muestraInformacionTotalLibreria() throws JAXBException {
         // Unmarshalling XML
         // System.out.println("Leemos el XML...");
         Unmarshaller um = contexto.createUnmarshaller();
         Libreria libreriaGetafe = (Libreria) um.unmarshal(new File("libreria.xml"));
         System.out.println(libreriaGetafe+"\n");
+    }
+
+    public static void muestraTitulosLibros() throws JAXBException {
+        Unmarshaller um = contexto.createUnmarshaller();
+        Libreria libreriaGetafe = (Libreria) um.unmarshal(new File("libreria.xml"));
+        System.out.println("Titulos de libros:");
+        for (int i = 0; i < libreriaGetafe.getLibros().size(); i++) {
+            System.out.println(libreriaGetafe.getLibros().get(i).getTitulo());
+        }
+
     }
 
 }
