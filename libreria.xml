@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Libreria>
+    <Libros>
+        <Libro>
+            <autor>Cervantes</autor>
+            <titulo>Quijote</titulo>
+            <editorial>El barco de Vapor</editorial>
+            <isbn>1234</isbn>
+        </Libro>
+        <Libro>
+            <autor>Fernando de Rojas</autor>
+            <titulo>La celestina</titulo>
+            <editorial>Anaya</editorial>
+            <isbn>2458</isbn>
+        </Libro>
+    </Libros>
+    <lugar>Getafe</lugar>
+    <nombre>Las hojas</nombre>
+</Libreria>
