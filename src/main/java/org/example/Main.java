@@ -10,8 +10,8 @@ import java.io.File;
 public class Main {
     public static void main(String[] args) throws JAXBException {
         Libreria lib = new Libreria("Las hojas", "Getafe");
-        lib.getLibros().add(new Libro("Cervantes", "Quijote", "El barco de Vapor", "1234"));
-        lib.getLibros().add(new Libro("Fernando de Rojas", "La celestina", "Anaya", "2458"));
+        lib.getLibros().add(new Libro("Cervantes", "Quijote", "El barco de Vapor", "1234", 20.7, 2001));
+        lib.getLibros().add(new Libro("Fernando de Rojas", "La celestina", "Anaya", "2458", 15.7, 1985));
 
         // Crear el contexto JAXB
         JAXBContext contexto = JAXBContext.newInstance(Libreria.class);

@@ -6,12 +6,16 @@
             <titulo>Quijote</titulo>
             <editorial>El barco de Vapor</editorial>
             <isbn>1234</isbn>
+            <precio>20.7</precio>
+            <año>2001</año>
         </Libro>
         <Libro>
             <autor>Fernando de Rojas</autor>
             <titulo>La celestina</titulo>
             <editorial>Anaya</editorial>
             <isbn>2458</isbn>
+            <precio>15.7</precio>
+            <año>1985</año>
         </Libro>
     </Libros>
     <lugar>Getafe</lugar>

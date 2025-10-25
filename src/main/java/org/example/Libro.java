@@ -1,21 +1,26 @@
 package org.example;
 
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
-@XmlType(propOrder = {"autor", "titulo", "editorial", "isbn"})
+@XmlType(propOrder = {"autor", "titulo", "editorial", "isbn", "precio", "anio"})
 public class Libro {
     private String autor;
     private String titulo;
     private String editorial;
     private String isbn;
+    private double precio;
+    private int anio;
 
-    public Libro() {}
+    public Libro(){}
 
-    public Libro(String autor, String titulo, String editorial, String isbn) {
+    public Libro(String autor, String titulo, String editorial, String isbn, double precio, int anio) {
         this.autor = autor;
         this.titulo = titulo;
         this.editorial = editorial;
         this.isbn = isbn;
+        this.precio = precio;
+        this.anio = anio;
     }
 
     public String getAutor() {
@@ -50,13 +55,33 @@ public class Libro {
         this.isbn = isbn;
     }
 
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public int getAnio() {
+        return anio;
+    }
+
+    // para renombrar la etiqueta en el XML a "año"
+    @XmlElement(name = "año")
+    public void setAnio(int anio) {
+        this.anio = anio;
+    }
+
     @Override
     public String toString() {
         return String.format("""
                    \tTitulo: %s
                    \tAutor: %s
                    \tEditorial: %s
-                   \tISBN: %s""", titulo, autor, editorial, isbn);
+                   \tISBN: %s
+                   \tPrecio: %.2f
+                   \tAño: %d""", titulo, autor, editorial, isbn, precio, anio);
 
     }
 }
