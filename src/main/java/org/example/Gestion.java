@@ -115,7 +115,6 @@ public class Gestion {
         t.nextLine();
 
         lib.getLibros().add(new Libro(autor, titulo, editorial, isbn, precio, anio));
-
         actualizarXML();
     }
 
