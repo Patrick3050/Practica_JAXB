@@ -1,32 +1,32 @@
 package org.example;
-
-import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
-import jakarta.xml.bind.Marshaller;
-import jakarta.xml.bind.Unmarshaller;
 
-import java.io.File;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws JAXBException {
-        Libreria lib = new Libreria("Las hojas", "Getafe");
-        lib.getLibros().add(new Libro("Cervantes", "Quijote", "El barco de Vapor", "1234", 20.7, 2001));
-        lib.getLibros().add(new Libro("Fernando de Rojas", "La celestina", "Anaya", "2458", 15.7, 1985));
+        Scanner t = new Scanner(System.in);
 
-        // Crear el contexto JAXB
-        JAXBContext contexto = JAXBContext.newInstance(Libreria.class);
+        int opcion;
+        do {
+            System.out.println("""
+                    ============= Menú librería ==============
+                    1. Mostrar datos.
+                    2. Mostrar solo los títulos de los libros.
+                    3. Mostrar los libros por autor
+                    4. Agregar nuevo libro al XML
+                    5. Salir
+                    ==========================================
+                    Seleccione una opción:\t""");
+            opcion = t.nextInt();
 
-        // Marshalling --> objetos JAVA a XML
-        /*Marshaller m = contexto.createMarshaller();
-        m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-        System.out.println("Generando XML...");
-        m.marshal(lib, new File("libreria.xml"));
-        m.marshal(lib, System.out);*/
+            if      (opcion == 1)  Gestion.muestraInformacionLibreria();
+            else if (opcion == 2)  Gestion.actualizarXML();
+            else if (opcion == 3)  ;
+            else if (opcion == 4)  ;
+            else if (opcion == 5)  System.out.println("Fin del programa.");
+            else System.err.println("Opcion inválida intentalo de nuevo.\n");
 
-        // Unmarshalling XML
-        System.out.println("Leemos el XML...");
-        Unmarshaller um = contexto.createUnmarshaller();
-        Libreria libreriaGetafe = (Libreria) um.unmarshal(new File("libreria.xml"));
-        System.out.println(libreriaGetafe);
+        } while (opcion != 5);
     }
 }
